@@ -1,0 +1,4 @@
+Django==1.4
+django-cms==2.3
+django-reversion==1.6.0
+PIL==1.1.7
