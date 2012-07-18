@@ -6,10 +6,10 @@
   <body>
       {% cms_toolbar %}
       <ul>
-        {% show_menu %}
+        {% show_menu 0 100 100 100 %}
       </ul>
       {% placeholder base_content %}
-      
+
       {% block base_content%}{% endblock %}
       {% render_block "js" %}
   </body>
