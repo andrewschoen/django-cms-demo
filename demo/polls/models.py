@@ -2,6 +2,7 @@ import datetime
 
 from django.db import models
 from django.utils import timezone
+from cms.models import CMSPlugin
 
 class Poll(models.Model):
     question = models.CharField(max_length=200)
@@ -23,3 +24,9 @@ class Choice(models.Model):
 
     def __unicode__(self):
         return self.choice
+
+class PollPlugin(CMSPlugin):
+    poll = models.ForeignKey('polls.Poll', related_name='plugins')
+
+    def __unicode__(self):
+      return self.poll.question
