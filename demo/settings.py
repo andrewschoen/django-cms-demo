@@ -181,6 +181,7 @@ LOGGING = {
 # django CMS settings
 LANGUAGES = [
     ('en', gettext('English')),
+    ('es', gettext('Spanish')),
 ]
 
 CMS_LANGUAGES = LANGUAGES
