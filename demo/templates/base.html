@@ -1,10 +1,13 @@
-{% load cms_tags sekizai_tags %}
+{% load cms_tags sekizai_tags menu_tags %}
 <html>
   <head>
       {% render_block "css" %}
   </head>
   <body>
       {% cms_toolbar %}
+      <ul>
+        {% show_menu %}
+      </ul>
       {% placeholder base_content %}
       {% block base_content%}{% endblock %}
       {% render_block "js" %}
