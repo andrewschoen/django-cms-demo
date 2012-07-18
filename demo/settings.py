@@ -1,6 +1,9 @@
 # Django settings for demo project.
 import os
+import sys
 PROJECT_DIR = os.path.abspath(os.path.dirname(__file__))
+
+sys.path.insert(0, PROJECT_DIR)
 
 gettext = lambda s: s
 
@@ -57,7 +60,7 @@ MEDIA_ROOT = os.path.join(PROJECT_DIR, "media")
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
 # trailing slash.
 # Examples: "http://media.lawrence.com/media/", "http://example.com/media/"
-MEDIA_URL = 'media'
+MEDIA_URL = '/media/'
 
 # Absolute path to the directory static files should be collected to.
 # Don't put anything in this directory yourself; store your static files
@@ -143,6 +146,7 @@ INSTALLED_APPS = (
     'sekizai',
     'reversion',
     'cms.plugins.text',
+    'polls',
 )
 
 # A sample logging configuration. The only tangible logging
@@ -176,11 +180,12 @@ LOGGING = {
 
 # django CMS settings
 LANGUAGES = [
-    ('en', 'English'),
+    ('en', gettext('English')),
 ]
 
-CMS_TEMPLATES = (
-    ('home.html', "Homepage"),
-    ('subpage.html', "Secondary Page"),
-)
+CMS_LANGUAGES = LANGUAGES
 
+CMS_TEMPLATES = (
+    ('home.html', gettext("Homepage")),
+    ('subpage.html', gettext("Secondary Page")),
+)
