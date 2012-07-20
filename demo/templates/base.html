@@ -1,16 +1,47 @@
 {% load cms_tags sekizai_tags menu_tags %}
-<html>
-  <head>
-      {% render_block "css" %}
-  </head>
-  <body>
-      {% cms_toolbar %}
-      <ul>
-        {% show_menu 0 100 100 100 %}
-      </ul>
-      {% placeholder base_content %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="{{ STATIC_URL}}css/bootstrap.min.css"/>
 
-      {% block base_content%}{% endblock %}
-      {% render_block "js" %}
-  </body>
+        <link rel="stylesheet" href="{{ STATIC_URL}}css/bootstrap-responsive.min.css"/>
+
+        <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+        <!--[if lt IE 9]>
+          <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+
+        {% render_block "css" %}
+    </head>
+    <body>
+      {% cms_toolbar %}
+        <div class="navbar">
+          <div class="navbar-inner">
+            <div class="container">
+              <a class="brand" href="/">django CMS demo</a>
+              <div class="nav-collapse">
+                <ul class="nav">
+                  {% show_menu 0 0 0 0 %}
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="container">
+
+            {% block base_content%}{% endblock %}
+            
+            <hr/>
+
+            <footer>
+                <p>django CMS demo | http://github.com/andrewschoen </p>
+            </footer>
+        </div>
+
+        <script type="text/javascript" src="{{ STATIC_URL }}js/bootstrap.min.js"></script>
+        {% render_block "js" %}
+    </body>
 </html>
