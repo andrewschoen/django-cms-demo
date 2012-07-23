@@ -1,6 +1,7 @@
-{% extends "base.html" %}
+{% extends "subpage_base.html" %}
 {% load cms_tags %}
 
-{% block base_content %}
+{% block sub_content %}
+    <h1>{% page_attribute "page_title" %}</h1>
   {% placeholder subpage_content %}
 {% endblock %}

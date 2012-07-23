@@ -37,7 +37,11 @@
             <hr/>
 
             <footer>
-                <p>django CMS demo | http://github.com/andrewschoen </p>
+                {% block footer %}
+                  {% placeholder 'footer' or %}
+                  <p>django CMS demo | http://github.com/andrewschoen </p>
+                  {% endplaceholder %}
+                {% endblock %}
             </footer>
         </div>
 

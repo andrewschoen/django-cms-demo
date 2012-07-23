@@ -16,7 +16,11 @@
         </div>
     </div>
     <div class="span9">
-        {% block poll_content %}{% endblock %}
+        {% block sub_content %}{% endblock %}
     </div>
 </div>
+{% endblock %}
+
+{% block footer %}
+    {% show_placeholder 'footer' 'home' %}    
 {% endblock %}
