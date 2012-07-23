@@ -1,6 +1,6 @@
-{% extends 'base.html' %}
+{% extends 'polls/poll_base.html' %}
 
-{% block base_content %}
+{% block poll_content %}
 <h1>{{ poll.question }}</h1>
 
 {% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}

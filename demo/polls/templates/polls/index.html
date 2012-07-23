@@ -1,12 +1,19 @@
-{% extends 'base.html' %}
+{% extends 'polls/poll_base.html' %}
+{% load cms_tags %}
 
-{% block base_content %}
+{% block poll_content %}
+{% placeholder 'poll_content' or %}
+    <h1>Take a poll, it'll be fun!</h1>
+    <p>After you vote you'll be shown the results.</p>
+{% endplaceholder %}
 {% if latest_poll_list %}
-    <ul>
-    {% for poll in latest_poll_list %}
-        <li><a href="/polls/{{ poll.id }}/">{{ poll.question }}</a></li>
-    {% endfor %}
-    </ul>
+    <div>
+        <ul>
+        {% for poll in latest_poll_list %}
+            <li><a href="/polls/{{ poll.id }}/">{{ poll.question }}</a></li>
+        {% endfor %}
+        </ul>
+    </div>
 {% else %}
     <p>No polls are available.</p>
 {% endif %}
