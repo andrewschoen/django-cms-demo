@@ -149,3 +149,27 @@ CMS_TEMPLATES = (
     ('home.html', gettext("Homepage")),
     ('subpage.html', gettext("Secondary Page")),
 )
+
+CMS_PLACEHOLDER_CONF = {
+    'home-hero': {
+        'name': gettext('Hero'),
+        'plugins': ['TextPlugin', ],
+    },
+    'home-col-1': {
+        'name': gettext('Column 1'),
+        'plugins': ['TextPlugin', ],
+    },
+    'home-col-2': {
+        'name': gettext('Column 2'),
+        'plugins': ['TextPlugin', ],
+    },
+    'home-col-3': {
+        'name': gettext('Column 3'),
+        'plugins': ['TextPlugin', 'PollPlugin',],
+        'limits': {
+            'global': 2,
+            'TextPlugin': 1,
+            'PollPlugin': 1,
+        },
+    },
+}
