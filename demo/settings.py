@@ -144,6 +144,11 @@ LANGUAGES = [
 ]
 
 CMS_LANGUAGES = LANGUAGES
+CMS_HIDE_UNTRANSLATED = True
+CMS_LANGUAGE_CONF = {
+        'es': ['en',],
+    }
+
 
 CMS_TEMPLATES = (
     ('home.html', gettext("Homepage")),
