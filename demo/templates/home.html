@@ -2,5 +2,36 @@
 {% load cms_tags %}
 
 {% block base_content %}
-  {% placeholder home_content%}
+    <div class="hero-unit">
+        {% placeholder "home-hero" or %}`
+        <h1>django CMS FTW!</h1>
+        <p>This is a demo site for django CMS. Check out the source at github to get your own copy and see how easy & awesome django CMS really is.  Check out my slides for my PyOhio talk to get started.  Have questions?  Find me on twitter @andrewschoen or ask in #django-cms.</p>
+        <p><a href="https://github.com/andrewschoen" class="btn btn-primary btn-large">Learn more &raquo;</a></p>
+        {% endplaceholder %}
+    </div>
+
+    <div class="row">
+        <div class="span4">
+          {% placeholder 'home-col-1'  or %}
+          <h2>Heading</h2>
+           <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+          <p><a class="btn" href="#">View details &raquo;</a></p>
+          {% endplaceholder %}
+        </div>
+        <div class="span4">
+          {% placeholder 'home-col-2' or %}            
+          <h2>Heading</h2>
+           <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+          <p><a class="btn" href="#">View details &raquo;</a></p>
+          {% endplaceholder %}
+       </div>
+        <div class="span4">
+            {% placeholder 'home-colw-3' or %}
+          <h2>Heading</h2>
+          <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+          <p><a class="btn" href="#">View details &raquo;</a></p>
+          {% endplaceholder %}
+        </div>
+      </div>
+
 {% endblock %}
