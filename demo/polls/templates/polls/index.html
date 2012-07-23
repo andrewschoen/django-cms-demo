@@ -4,7 +4,7 @@
 {% block sub_content %}
 {% placeholder 'poll_content' or %}
     <h1>Take a poll, it'll be fun!</h1>
-    <p>After you vote you'll be shown the results.</p>
+    <p>This is an example of a placeholder in an app controlled page.  You can edit this like you would any other placeholder on a CMS controlled page, but the content will be the same for every poll rendering this template.  However, you can use a PlaceHolderField if you want the content to be poll specific.  Check out the docs here: <a href="http://docs.django-cms.org/en/2.3/extending_cms/placeholders.html">http://docs.django-cms.org/en/2.3/extending_cms/placeholders.html</a></p>
 {% endplaceholder %}
 {% if latest_poll_list %}
     <div>
