@@ -1,10 +1,17 @@
-<h1>{{ instance.poll.question }}</h1>
-
-<form action="{% url polls.views.vote instance.poll.id %}" method="post">
-{% csrf_token %}
-{% for choice in instance.poll.choice_set.all %}
-    <input type="radio" name="choice" id="choice{{ forloop.counter }}" value="{{ choice.id }}" />
-    <label for="choice{{ forloop.counter }}">{{ choice.choice }}</label><br />
-{% endfor %}
-<input type="submit" value="Vote" />
+<form action="{% url polls.views.vote instance.poll.id %}" method="post" class="form-vertical">
+    <fieldset>
+        <legend>{{ instance.poll.question }}</legend>
+            {% csrf_token %}
+            {% for choice in instance.poll.choice_set.all %}
+            <div class="control-group required">
+                <label class="control-label" for="choice{{ forloop.counter }}">{{ choice.choice }}</label>
+                <div class="controls">
+                    <input type="radio" name="choice" id="choice{{ forloop.counter }}" value="{{ choice.id }}" /> 
+                </div>
+            </div>
+            {% endfor %}
+    </fieldset>
+    <div class="well">
+        <input type="submit" value="Vote" />
+    </div>
 </form>
