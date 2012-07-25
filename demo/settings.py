@@ -181,6 +181,9 @@ CMS_PLACEHOLDER_CONF = {
             'PollPlugin': 1,
         },
     },
+    'subpage_content': {
+        'name': gettext('Content'),
+    },
 }
 
 THUMBNAIL_PROCESSORS = (
