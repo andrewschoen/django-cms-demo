@@ -35,11 +35,9 @@ LANGUAGE_CODE = 'en-us'
 
 SITE_ID = 1
 
-
 USE_I18N = True
 USE_L10N = True
 USE_TZ = True
-
 
 MEDIA_ROOT = os.path.join(PROJECT_DIR, "media")
 MEDIA_URL = '/media/'
@@ -90,7 +88,7 @@ ROOT_URLCONF = 'demo.urls'
 WSGI_APPLICATION = 'demo.wsgi.application'
 
 TEMPLATE_DIRS = (
-    os.path.join(PROJECT_DIR, "templates")
+    os.path.join(PROJECT_DIR, "templates"),
 )
 
 INSTALLED_APPS = (
@@ -113,10 +111,9 @@ INSTALLED_APPS = (
     'filer',
     'easy_thumbnails',
     'cmsplugin_filer_file',
-    'cmsplugin_filer_folder',
     'cmsplugin_filer_image',
     'cmsplugin_filer_teaser',
-    'cmsplugin_filer_video',
+    'cms.plugins.link',
 )
 
 
