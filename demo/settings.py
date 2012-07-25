@@ -114,6 +114,7 @@ INSTALLED_APPS = (
     'cmsplugin_filer_image',
     'cmsplugin_filer_teaser',
     'cms.plugins.link',
+    'plugins.bootstrap_button',
 )
 
 
@@ -162,19 +163,19 @@ CMS_TEMPLATES = (
 CMS_PLACEHOLDER_CONF = {
     'home-hero': {
         'name': gettext('Hero'),
-        'plugins': ['TextPlugin', ],
+        'plugins': ['TextPlugin', 'BootstrapButtonPlugin',],
     },
     'home-col-1': {
         'name': gettext('Column 1'),
-        'plugins': ['TextPlugin', ],
+        'plugins': ['TextPlugin', 'BootstrapButtonPlugin',],
     },
     'home-col-2': {
         'name': gettext('Column 2'),
-        'plugins': ['TextPlugin', ],
+        'plugins': ['TextPlugin', 'BootstrapButtonPlugin',],
     },
     'home-col-3': {
         'name': gettext('Column 3'),
-        'plugins': ['TextPlugin', 'PollPlugin',],
+        'plugins': ['TextPlugin', 'PollPlugin', ],
         'limits': {
             'global': 2,
             'TextPlugin': 1,
