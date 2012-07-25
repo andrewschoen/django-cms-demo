@@ -1,7 +1,6 @@
 Django==1.4
 PIL==1.1.7
 South==0.7.5
-cmsplugin-filer==0.8.0
 django-classy-tags==0.3.4.1
 django-cms==2.3
 django-mptt==0.5.2
@@ -12,5 +11,6 @@ easy-thumbnails==1.0.3
 html5lib==0.95
 wsgiref==0.1.2
 
-# use develop for django 1.4 support for now
+# use develop for django 1.4 support and other fixes for now
 -e git://github.com/stefanfoulis/django-filer.git#egg=filer
+-e git://github.com/stefanfoulis/cmsplugin-filer.git#egg=cmsplugin-filer
