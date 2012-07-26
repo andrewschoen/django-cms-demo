@@ -21,7 +21,7 @@ Installation (with included database)
 
     $ git clone git://github.com/andrewschoen/django-cms-demo.git
     $ cd django-cms-demo
-    $ pip install -r requirements.txt
+    $ pip install -r requirements.txt # install in a virtualenv
     $ python manage.py runserver
 
 
@@ -32,7 +32,7 @@ Installation (without included database)
 
     $ git clone git://github.com/andrewschoen/django-cms-demo.git
     $ cd django-cms-demo
-    $ pip install -r requirements.txt
+    $ pip install -r requirements.txt # install in a virtualenv
     $ python manage.py syncdb --all
     $ python manage.py migrate --fake
     $ python manage.py runserver
@@ -50,4 +50,5 @@ Admin credentials
 If you're using the included database, here are the admin credentials.
 
 un: admin
+
 pw: djangocms
