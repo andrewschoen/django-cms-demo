@@ -16,16 +16,21 @@
     <div class="row">
         <div class="span4">
           {% placeholder 'home-col-1'  or %}
-          <h2>Heading</h2>
-           <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-          <p><a class="btn" href="#">View details &raquo;</a></p>
+          <h2>Using the Admin</h2>
+           <p>If you're using the provided database I've already created a super
+           user account for you.  Go to the amdin and use these credentials. </p>
+           <ul>
+              <li>UN: admin</li>
+              <li>PW: djangocms</li>
+           </ul>
+          <p><a class="btn" href="/admin">Login to the admin &raquo;</a></p>
           {% endplaceholder %}
         </div>
         <div class="span4">
           {% placeholder 'home-col-2' or %}            
-          <h2>Heading</h2>
-           <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-          <p><a class="btn" href="#">View details &raquo;</a></p>
+          <h2>Using Frontend Editing</h2>
+           <p>Click the button below to enable the frontend editor.  Or, on any page you can add ?edit to the url to enable edit mode. The '+' in the upper right hand corner shows the toolbar.  You'll need to be logged into the admin already, or login from the toolbar. </p>
+          <p><a class="btn" href="?edit">Frontend Editing &raquo;</a></p>
           {% endplaceholder %}
        </div>
         <div class="span4">
