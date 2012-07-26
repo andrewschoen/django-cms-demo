@@ -8,8 +8,8 @@ django CMS works.
 Get the code and run the project locally.  Make sure to checkout the 
 frontend editing feature and try to add some pages.
 
-This demo assumes you know a bit about Django, Python and that you
-have Python already installed.  Also, if you aren't using virtualenv
+This demo assumes you know a bit about Django, Python, virtualenv, pip and that you
+have Python, pip and virtualenv installed already.  Also, if you aren't using virtualenv
 to pip install the requirements, shame on you.  But, it'll work
 without it.
 
@@ -21,7 +21,9 @@ Installation (with included database)
 
     $ git clone git://github.com/andrewschoen/django-cms-demo.git
     $ cd django-cms-demo
-    $ pip install -r requirements.txt # install in a virtualenv
+    $ virtualenv env
+    $ source env/bin/activate
+    $ pip install -r requirements.txt
     $ python manage.py runserver
 
 
@@ -32,7 +34,9 @@ Installation (without included database)
 
     $ git clone git://github.com/andrewschoen/django-cms-demo.git
     $ cd django-cms-demo
-    $ pip install -r requirements.txt # install in a virtualenv
+    $ virtualenv env
+    $ source env/bin/activate
+    $ pip install -r requirements.txt
     $ python manage.py syncdb --all
     $ python manage.py migrate --fake
     $ python manage.py runserver
