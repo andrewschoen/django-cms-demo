@@ -187,6 +187,15 @@ CMS_PLACEHOLDER_CONF = {
     },
 }
 
+CMS_URL_OVERWRITE = True
+CMS_MENU_TITLE_OVERWRITE = True
+CMS_REDIRECTS = True
+CMS_SOFTROOT = True
+CMS_PERMISSION = True
+CMS_SHOW_START_DATE = True
+CMS_SHOW_END_DATE = True 
+CMS_SEO_FIELDS = True 
+
 THUMBNAIL_PROCESSORS = (
     'easy_thumbnails.processors.colorspace',
     'easy_thumbnails.processors.autocrop',
