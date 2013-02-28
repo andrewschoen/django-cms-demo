@@ -1,5 +1,6 @@
 Django==1.4
-PIL==1.1.7
+# PIL replacement for easier installs
+pillow==1.7.8
 South==0.7.5
 django-classy-tags==0.3.4.1
 django-cms==2.3
