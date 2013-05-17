@@ -1,9 +1,9 @@
-Django==1.4
+Django==1.4.5
 # PIL replacement for easier installs
 pillow==1.7.8
 South==0.7.5
 django-classy-tags==0.3.4.1
-django-cms==2.3
+django-cms==2.3.6
 django-mptt==0.5.2
 django-polymorphic==0.2
 django-reversion==1.6.0
@@ -11,7 +11,5 @@ django-sekizai==0.6.1
 easy-thumbnails==1.0.3
 html5lib==0.95
 wsgiref==0.1.2
-
-# use develop for django 1.4 support and other fixes for now
--e git://github.com/stefanfoulis/django-filer.git#egg=filer
--e git://github.com/stefanfoulis/cmsplugin-filer.git#egg=cmsplugin-filer
+django-filer==0.9.4
+cmsplugin-filer==0.9.5
