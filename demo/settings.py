@@ -64,13 +64,14 @@ TEMPLATE_LOADERS = (
 MIDDLEWARE_CLASSES = (
     'django.middleware.common.CommonMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'django.middleware.locale.LocaleMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
-    'cms.middleware.multilingual.MultilingualURLMiddleware', #CMS
     'cms.middleware.page.CurrentPageMiddleware', #CMS
     'cms.middleware.user.CurrentUserMiddleware', #CMS
     'cms.middleware.toolbar.ToolbarMiddleware', #CMS
+    'cms.middleware.language.LanguageCookieMiddleware' # CMS
 )
 
 TEMPLATE_CONTEXT_PROCESSORS = (
@@ -148,12 +149,14 @@ LANGUAGES = [
     ('es', gettext('Spanish')),
 ]
 
-CMS_LANGUAGES = LANGUAGES
-CMS_HIDE_UNTRANSLATED = True
-CMS_LANGUAGE_CONF = {
-        'es': ['en',],
+CMS_LANGUAGES = {
+    'default': {
+        'fallbacks': ['en', 'es'],
+        'redirect_on_fallback':True,
+        'public': False,
+        'hide_untranslated': False,
     }
-
+}
 
 CMS_TEMPLATES = (
     ('home.html', gettext("Homepage")),
