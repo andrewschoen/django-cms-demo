@@ -5,7 +5,6 @@ argparse==1.2.1
 cmsplugin-filer==0.9.5
 distribute==0.6.40
 django-classy-tags==0.4
-django-cms==2.4.1
 django-filer==0.9.4
 django-mptt==0.5.2
 django-polymorphic==0.4.2
@@ -14,3 +13,7 @@ django-sekizai==0.7
 easy-thumbnails==1.2
 html5lib==0.95
 wsgiref==0.1.2
+
+-e git+https://github.com/divio/django-cms#egg=django-cms-dev
+-e git+https://github.com/divio/djangocms-text-ckeditor#egg=djangocms-text-ckeditor-dev
+
